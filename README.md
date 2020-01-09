@@ -1,6 +1,6 @@
 ## ESTIAM - Instragram
 
-![](https://i.imgur.com/cVRsMV9.png)
+![](https://i.imgur.com/8XBiHpw.jpg)
 
 ```
 $ npm i 
