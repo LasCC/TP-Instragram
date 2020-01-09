@@ -1,0 +1,45 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.sb_verified svg {
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #5198e9;
+}
+
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: black !important;
+}
+
+.MuiFormLabel-root.Mui-focused {
+  color: black !important;
+}
+
+.circle {
+  height: 150px;
+  width: 150px;
+  background: #fafafa;
+  border-radius: 100%;
+  position: relative;
+  padding: 4px;
+}
+
+.circle::before {
+  width: 100%;
+  height: 100%;
+  content: "";
+  top: -4px;
+  left: -4px;
+  position: absolute;
+  z-index: -1;
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  border-radius: 100%;
+  padding: 4px;
+}
