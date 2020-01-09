@@ -11,6 +11,11 @@ import {
 document.body.style.backgroundColor = "#fafafa";
 
 const tileData = require("../data/tile.json");
+const randomImage = (min, max) => {
+  return `https://i.picsum.photos/id/${Math.floor(
+    Math.random() * (max - min + 1)
+  ) + min}/500/700.jpg`;
+};
 
 export default props => {
   const [open, setOpen] = React.useState(false);
@@ -110,7 +115,7 @@ export default props => {
         >
           {tileData.map(tile => (
             <GridListTile key={tile.img} cols={tile.cols || 1}>
-              <img src={tile.img} alt={tile.title} />
+              <img src={randomImage(1, 1050)} alt={tile.title} />
             </GridListTile>
           ))}
         </GridList>
@@ -124,7 +129,7 @@ export default props => {
       >
         <i
           className="uil uil-user-plus"
-          style={{ textAlign: "center", fontSize: 55, marginBottom: 10 }}
+          style={{ textAlign: "center", fontSize: 65, padding: 20 }}
         />
         <Typography color="textSecondary" align="center">
           Connectez-vous pour vous abonner.
