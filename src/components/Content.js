@@ -12,7 +12,7 @@ document.body.style.backgroundColor = "#fafafa";
 
 const tileData = require("../data/tile.json");
 const randomImage = (min, max) => {
-  return `https://i.picsum.photos/id/${Math.floor(
+  return `https://picsum.photos/1920/1080?random=${Math.floor(
     Math.random() * (max - min + 1)
   ) + min}/500/700.jpg`;
 };
@@ -27,12 +27,13 @@ export default props => {
   const handleClose = () => {
     setOpen(false);
   };
+
   return (
     <Box style={{ height: "90vh" }}>
       <Box style={{ height: "35%" }} display="flex" alignItems="center">
         <Box className="circle">
           <img
-            src="https://picsum.photos/200"
+            src="https://instagram.fcdg2-1.fna.fbcdn.net/v/t51.2885-19/s150x150/44352037_315306639066160_7951192171044929536_n.jpg?_nc_ht=instagram.fcdg2-1.fna.fbcdn.net&_nc_ohc=P-GRijRoiy0AX_t5xCf&oh=360f6c20b5957f2ab2fa90144dfdf795&oe=5E9BBFDF"
             alt="instaAvatar"
             style={{ borderRadius: 150, height: 150, width: 150 }}
           />
@@ -64,7 +65,8 @@ export default props => {
                 backgroundColor: "#3897f0",
                 color: "white",
                 fontWeight: "600",
-                textTransform: "capitalize"
+                textTransform: "capitalize",
+                marginbRight: 10
               }}
             >
               S'abonner
@@ -88,7 +90,9 @@ export default props => {
             Big Data & Business Intelligence,Architecture Cloud systèmes &
             réseaux. <br />
             <a
-              href="www.estiam.education"
+              href="http://estiam.education"
+              target="_blank"
+              rel="noopener noreferrer"
               style={{
                 textDecoration: "none",
                 color: "#003569",
@@ -105,7 +109,8 @@ export default props => {
           display: "flex",
           flexWrap: "wrap",
           justifyContent: "space-around",
-          overflow: "hidden"
+          overflow: "hidden",
+          marginBottom: 25
         }}
       >
         <GridList
@@ -114,12 +119,47 @@ export default props => {
           cols={3}
         >
           {tileData.map(tile => (
-            <GridListTile key={tile.img} cols={tile.cols || 1}>
-              <img src={randomImage(1, 1050)} alt={tile.title} />
+            <GridListTile
+              key={tile.like}
+              cols={tile.cols || 1}
+              style={{ cursor: "pointer" }}
+            >
+              <div className="container">
+                <img
+                  src={randomImage(1, 50)}
+                  alt={tile.title}
+                  className="image"
+                />
+                <div className="overlay">
+                  <Box className="text" display="flex" alignItems="center">
+                    <i className="uil uil-heart-alt" />
+                    <Typography style={{ fontSize: 15 }}>
+                      {tile.likes}
+                    </Typography>
+                    <i className="uil uil-comment" style={{ marginLeft: 10 }} />
+                    <Typography style={{ fontSize: 15 }}>
+                      {tile.comment}
+                    </Typography>
+                  </Box>
+                </div>
+              </div>
             </GridListTile>
           ))}
         </GridList>
       </div>
+      <Box align="right" style={{ marginBottom: 15 }}>
+        <Typography variant="body2" color="textSecondary">
+          © 2020 INSTAGRAM REPRODUCTION{" "}
+          <a
+            href="https://github.com/LasCC"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "black", textDecoration: "none" }}
+          >
+            LasCC
+          </a>
+        </Typography>
+      </Box>
 
       <Dialog
         open={open}

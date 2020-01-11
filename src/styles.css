@@ -2,6 +2,10 @@
   font-family: "Poppins", sans-serif;
 }
 
+body {
+  margin: 0px !important;
+}
+
 .sb_verified svg {
   margin-left: 10px;
   margin-right: 10px;
@@ -14,6 +18,10 @@
 
 .MuiFormLabel-root.Mui-focused {
   color: black !important;
+}
+
+.MuiOutlinedInput-input {
+  padding: 11.5px 14px !important;
 }
 
 .circle {
@@ -42,4 +50,50 @@
   );
   border-radius: 100%;
   padding: 4px;
+}
+
+.MuiGridListTile-imgFullWidth {
+  width: 100% !important;
+  transform: translateY(0%) !important;
+}
+
+.container {
+  position: relative;
+  width: auto;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: rgba(0, 0, 0, 0.534);
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 5;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
 }

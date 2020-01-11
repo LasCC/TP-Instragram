@@ -45,22 +45,30 @@ export default props => {
         />
       </Box>
       <Box flexGrow={1}>
-        <TextField variant="outlined" label="Rechercher" />
+        <TextField
+          variant="outlined"
+          label="Rechercher"
+          defaultValue="estiameducation"
+          InputProps={{
+            readOnly: true
+          }}
+        />
       </Box>
       <Box>
         <Button
-          onClick={alertHandler()}
+          onClick={alertHandler}
           style={{
             backgroundColor: "#3897f0",
             color: "white",
             fontWeight: "600",
-            textTransform: "capitalize"
+            textTransform: "capitalize",
+            marginRight: 10
           }}
         >
           S'identifier
         </Button>
         <Button
-          onClick={alertHandler()}
+          onClick={alertHandler}
           style={{
             color: "#3897f0",
             fontWeight: "600",
