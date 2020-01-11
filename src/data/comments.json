@@ -1,0 +1,32 @@
+[
+  {
+    "comment": "Super cool",
+    "avatar": "https://api.adorable.io/avatars/285",
+    "name": "Jean-Diego"
+  },
+  {
+    "comment": "N'hésitez pas à aller voir mon github https://github.com/LasCC",
+    "avatar": "https://api.adorable.io/avatars/285",
+    "name": "Célestin"
+  },
+  {
+    "comment": "Etudiant en deuxième année à estiam",
+    "avatar": "https://api.adorable.io/avatars/285",
+    "name": "Gérard Junior"
+  },
+  {
+    "comment": "React est sympathique quand même..",
+    "avatar": "https://api.adorable.io/avatars/285",
+    "name": "Ausséane"
+  },
+  {
+    "comment": "Oloruntech est pas ouf finalement",
+    "avatar": "https://api.adorable.io/avatars/285",
+    "name": "Charles-Michael"
+  },
+  {
+    "comment": "L'ESGI est sympa comme école elle aussi.",
+    "avatar": "https://api.adorable.io/avatars/285",
+    "name": "Régis"
+  }
+]
