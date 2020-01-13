@@ -2,6 +2,7 @@ import React from "react";
 import { Box, TextField, Button } from "@material-ui/core";
 import UseAnimations from "react-useanimations";
 import { Alert } from "@material-ui/lab";
+import { Link } from "react-router-dom";
 
 export default props => {
   const alertHandler = () => {
@@ -55,28 +56,35 @@ export default props => {
         />
       </Box>
       <Box>
-        <Button
-          onClick={alertHandler}
-          style={{
-            backgroundColor: "#3897f0",
-            color: "white",
-            fontWeight: "600",
-            textTransform: "capitalize",
-            marginRight: 10
-          }}
+        <Link to="/login" style={{ textDecoration: "none ", color: "white" }}>
+          <Button
+            onClick={alertHandler}
+            style={{
+              backgroundColor: "#3897f0",
+              color: "white",
+              fontWeight: "600",
+              textTransform: "capitalize",
+              marginRight: 10
+            }}
+          >
+            S'identifier
+          </Button>
+        </Link>
+        <Link
+          to="/register"
+          style={{ textDecoration: "none", color: "#3897f0" }}
         >
-          S'identifier
-        </Button>
-        <Button
-          onClick={alertHandler}
-          style={{
-            color: "#3897f0",
-            fontWeight: "600",
-            textTransform: "capitalize"
-          }}
-        >
-          S'inscrire
-        </Button>
+          <Button
+            onClick={alertHandler}
+            style={{
+              color: "#3897f0",
+              fontWeight: "600",
+              textTransform: "capitalize"
+            }}
+          >
+            S'inscrire
+          </Button>
+        </Link>
       </Box>
     </Box>
   );
