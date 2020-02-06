@@ -1,24 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Box, TextField, Button } from "@material-ui/core";
 import UseAnimations from "react-useanimations";
-import { Alert } from "@material-ui/lab";
-import { Link } from "react-router-dom";
 
 export default props => {
-  const alertHandler = () => {
-    return (
-      <div
-        style={{
-          width: "100%",
-          "& > * + *": {
-            marginTop: 15
-          }
-        }}
-      >
-        <Alert severity="error">This is an error alert — check it out!</Alert>
-      </div>
-    );
-  };
   return (
     <Box
       display="flex"
@@ -30,7 +15,11 @@ export default props => {
       }}
     >
       <Box display="flex" alignItems="center" flexGrow={1}>
-        <UseAnimations animationKey="instagram" size={35} />
+        <UseAnimations
+          animationKey="instagram"
+          size={35}
+          style={{ marginTop: 2 }}
+        />
         <span
           style={{
             backgroundColor: "#262626",
@@ -39,16 +28,17 @@ export default props => {
             width: "1.2px"
           }}
         />
-        <img
-          src="https://www.instagram.com/static/images/web/mobile_nav_type_logo-2x.png/1b47f9d0e595.png%202x"
-          alt="instagramLogo"
-          style={{ width: 120, marginTop: 8 }}
-        />
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <img
+            src="https://www.instagram.com/static/images/web/mobile_nav_type_logo-2x.png/1b47f9d0e595.png%202x"
+            alt="instagramLogo"
+            style={{ width: 90, marginTop: 8 }}
+          />
+        </Link>
       </Box>
       <Box flexGrow={1}>
         <TextField
-          variant="outlined"
-          label="Rechercher"
+          label="Search"
           defaultValue="estiameducation"
           InputProps={{
             readOnly: true
@@ -58,7 +48,6 @@ export default props => {
       <Box>
         <Link to="/login" style={{ textDecoration: "none ", color: "white" }}>
           <Button
-            onClick={alertHandler}
             style={{
               backgroundColor: "#3897f0",
               color: "white",
@@ -75,7 +64,6 @@ export default props => {
           style={{ textDecoration: "none", color: "#3897f0" }}
         >
           <Button
-            onClick={alertHandler}
             style={{
               color: "#3897f0",
               fontWeight: "600",

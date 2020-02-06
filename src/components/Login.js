@@ -1,6 +1,6 @@
 import React from "react";
-import { Box, TextField, Typography, Button } from "@material-ui/core";
 import { Link } from "react-router-dom";
+import { Box, TextField, Typography, Button } from "@material-ui/core";
 document.body.style.backgroundColor = "#fafafa";
 
 export default props => {
@@ -19,13 +19,15 @@ export default props => {
           padding: 40
         }}
       >
-        <Box align="center">
-          <img
-            src="https://www.instagram.com/static/images/web/mobile_nav_type_logo-2x.png/1b47f9d0e595.png%202x"
-            alt="instagramLogo"
-            style={{ width: 170, marginTop: 8 }}
-          />
-        </Box>
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <Box align="center">
+            <img
+              src="https://www.instagram.com/static/images/web/mobile_nav_type_logo-2x.png/1b47f9d0e595.png%202x"
+              alt="instagramLogo"
+              style={{ width: 170, marginTop: 8 }}
+            />
+          </Box>
+        </Link>
         <TextField
           fullWidth
           label="Adresse-mail"
@@ -52,7 +54,7 @@ export default props => {
           Se connecter
         </Button>
         <Box align="center" style={{ marginTop: 15 }}>
-          <Typography>
+          <Typography style={{ fontSize: 13 }}>
             Vous n'avez pas de compte ?{" "}
             <Link
               to="/register"

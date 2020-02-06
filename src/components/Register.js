@@ -40,11 +40,13 @@ export default props => {
         >
           <Box style={{ padding: 35 }}>
             <Box align="center">
-              <img
-                src="https://www.instagram.com/static/images/web/mobile_nav_type_logo-2x.png/1b47f9d0e595.png%202x"
-                alt="instagramLogo"
-                style={{ width: 170, marginTop: 8 }}
-              />
+              <Link to="/" style={{ textDecoration: "none" }}>
+                <img
+                  src="https://www.instagram.com/static/images/web/mobile_nav_type_logo-2x.png/1b47f9d0e595.png%202x"
+                  alt="instagramLogo"
+                  style={{ width: 170, marginTop: 8 }}
+                />
+              </Link>
               <Typography
                 style={{ fontWeight: "bold", marginTop: 10 }}
                 variant="body2"
@@ -115,7 +117,7 @@ export default props => {
               <Typography
                 color="textSecondary"
                 style={{
-                  fontSize: 15,
+                  fontSize: 12,
                   marginTop: 15,
                   textAlign: "center"
                 }}
